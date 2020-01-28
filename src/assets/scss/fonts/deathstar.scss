@@ -1,0 +1,13 @@
+$fontDir: '~@/assets/fonts/Deathstar/';
+
+@font-face {
+  font-family: 'Deathstar';
+  src: url('#{$fontDir}Deathstar.eot');
+  src: url('#{$fontDir}Deathstar.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontDir}Deathstar.svg') format('svg'),
+  url('#{$fontDir}Deathstar.ttf')  format('truetype'),
+  url('#{$fontDir}Deathstar.woff') format('woff'),
+  url('#{$fontDir}Deathstar.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}

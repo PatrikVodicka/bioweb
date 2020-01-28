@@ -1,0 +1,14 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/mixins";
+@import "../variables";
+
+#me {
+  user-select: none;
+  pointer-events: none;
+}
+
+@include media-breakpoint-up(md) {
+  #me {
+    transform: scale(1.15);
+  }
+}
