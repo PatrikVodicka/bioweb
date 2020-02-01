@@ -1,7 +1,7 @@
 import Home from '../views/Home';
 import About from '../views/About';
 import Contact from '../views/Contact';
-import References from '../views/References';
+import MyWork from '../views/MyWork';
 
 const routes = [
     {
@@ -20,9 +20,9 @@ const routes = [
         component: Contact
     },
     {
-        path: '/references',
-        name: 'References',
-        component: References
+        path: '/my-work',
+        name: 'MyWork',
+        component: MyWork
     },
 ]
 

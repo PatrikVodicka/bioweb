@@ -1,17 +1,41 @@
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/mixins";
 @import "../variables";
+@import "../animations";
 @import "../fonts/deathstar";
+
+section {
+  user-select: none;
+}
+
+.sw-intro, .sw-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100vw;
+  padding: 1rem;
+}
 
 .sw-intro {
   color: #1B7DEB;
   text-shadow: 0 0 1px #1B7DEB;
-  font-size: 20px;
+  font-size: 1.5rem;
+
+  opacity: 0;
+  animation-name: fadeInOut;
+  animation-timing-function: ease-in-out;
 }
 
 .sw-title {
-  font-family: 'Deathstar';
+  display: none;
   color: #ff6;
+  font-family: 'Deathstar';
+
+
+  opacity: 0;
+  animation-name: fadeInOut;
+  animation-timing-function: ease-in-out;
 }
 
 .sw-prolog {
@@ -22,13 +46,15 @@
   bottom: 0;
   margin: auto;
 
-  width: 100%;
+  width: 90%;
   height: 100%;
   transform-origin: 50% 100%;
 
   color: #ff6;
   font-size: 1rem;
   text-align: justify;
+
+  transition: transform 1s ease;
 }
 
 @include media-breakpoint-up(sm) {
