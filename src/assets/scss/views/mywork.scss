@@ -1,3 +1,43 @@
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/mixins";
 @import "../variables";
+
+article {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+
+  &:nth-child(2) {
+    animation-delay: .1s;
+  }
+
+  &:nth-child(3) {
+    animation-delay: .2s;
+  }
+
+  > *:last-child {
+    margin-bottom: 0; // no margin bottom on last element
+  }
+}
+
+article:not(:first-of-type):before {
+  display: block;
+  content: '';
+  margin: 3rem auto;
+  height: 1px;
+  width: 100%;
+  background: transparent linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, $sw-blue 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+a {
+  color: $sw-yellow;
+
+  &:hover {
+    color: $sw-yellow;
+  }
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 1rem;
+  max-width: 150px;
+}

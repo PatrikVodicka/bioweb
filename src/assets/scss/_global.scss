@@ -31,17 +31,6 @@ nav {
   }
 }
 
-section {
-  min-height: 100vh;
-
-  &:first-of-type {
-    height: 100vh;
-    padding-top: $nav-height;
-    padding-bottom: $nav-height;
-    margin-top: -$nav-height;
-  }
-}
-
 a {
   color: white;
   text-decoration: none;
@@ -53,7 +42,7 @@ a {
 }
 
 #app {
-  animation: fadeIn 1s ease-out;
+  animation: fadeIn 1s ease-out forwards;
 }
 
 #noscript {

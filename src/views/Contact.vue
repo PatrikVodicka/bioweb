@@ -72,8 +72,8 @@
                 }, function () {
                     vm.skype.isCopied = false;
                 })
-            }
-        }
+            },
+        },
     }
 </script>
 

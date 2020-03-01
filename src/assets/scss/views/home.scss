@@ -2,6 +2,14 @@
 @import "~bootstrap/scss/mixins";
 @import "../variables";
 
+section {
+  height: 100vh;
+  padding-top: $nav-height;
+  padding-bottom: $nav-height;
+  margin-top: -$nav-height;
+  animation: fadeIn 1s ease-out;
+}
+
 #me {
   user-select: none;
   pointer-events: none;

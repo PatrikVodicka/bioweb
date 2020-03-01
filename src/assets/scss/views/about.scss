@@ -5,7 +5,14 @@
 @import "../fonts/deathstar";
 
 section {
+  height: 100vh;
+  padding-top: $nav-height;
+  padding-bottom: $nav-height;
+  margin-top: -$nav-height;
+
+  pointer-events: none;
   user-select: none;
+  overflow: hidden;
 }
 
 .sw-intro, .sw-title {
@@ -18,8 +25,8 @@ section {
 }
 
 .sw-intro {
-  color: #1B7DEB;
-  text-shadow: 0 0 1px #1B7DEB;
+  color: $sw-blue;
+  text-shadow: 0 0 1px $sw-blue;
   font-size: 1.5rem;
 
   opacity: 0;
@@ -29,9 +36,8 @@ section {
 
 .sw-title {
   display: none;
-  color: #ff6;
+  color: $sw-yellow;
   font-family: 'Deathstar';
-
 
   opacity: 0;
   animation-name: fadeInOut;
@@ -49,12 +55,15 @@ section {
   width: 90%;
   height: 100%;
   transform-origin: 50% 100%;
+  transform: perspective(33rem) rotateX(20deg);
 
-  color: #ff6;
+  color: $sw-yellow;
   font-size: 1rem;
   text-align: justify;
 
-  transition: transform 1s ease;
+  > div {
+    transition: margin-top .25s ease;
+  }
 }
 
 @include media-breakpoint-up(sm) {

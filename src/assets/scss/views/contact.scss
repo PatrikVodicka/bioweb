@@ -1,6 +1,14 @@
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/mixins";
 @import "../variables";
+@import "../animations";
+
+section {
+  height: 100vh;
+  padding-top: $nav-height;
+  padding-bottom: $nav-height;
+  margin-top: -$nav-height;
+}
 
 .logo {
   display: block;
@@ -10,20 +18,26 @@
   max-width: calc(10vh + 10vw);
   max-height: calc(10vh + 10vw);
   cursor: pointer;
-}
 
-#linkedin {
-  fill: #0077B5 !important;
-}
-
-#facebook {
-  fill: #4267B2 !important;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
 }
 
 #skype {
   fill: #0078ca !important;
 }
 
+#linkedin {
+  fill: #0077B5 !important;
+  animation-delay: .1s;
+}
+
+#facebook {
+  fill: #4267B2 !important;
+  animation-delay: .2s;
+}
+
 #gmail {
   fill: #b23121 !important;
+  animation-delay: .3s;
 }
