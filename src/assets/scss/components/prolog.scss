@@ -1,0 +1,87 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/mixins";
+@import "../variables";
+@import "../animations";
+@import "../fonts/deathstar";
+
+article {
+  height: 100vh;
+  padding-top: $nav-height;
+  padding-bottom: $nav-height;
+  margin-top: -$nav-height;
+
+  pointer-events: none;
+  user-select: none;
+  overflow: hidden;
+}
+
+.sw-intro, .sw-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100vw;
+  padding: 1rem;
+}
+
+.sw-intro {
+  color: $sw-blue;
+  text-shadow: 0 0 1px $sw-blue;
+  font-size: 1.5rem;
+
+  opacity: 0;
+  animation-name: fadeInOut;
+  animation-timing-function: ease-in-out;
+}
+
+.sw-title {
+  display: none;
+  color: $sw-yellow;
+  font-family: "Deathstar";
+
+  opacity: 0;
+  animation-name: fadeInOut;
+  animation-timing-function: ease-in-out;
+}
+
+.sw-prolog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+
+  width: 90%;
+  height: 100%;
+  transform-origin: 50% 100%;
+  transform: perspective(33rem) rotateX(20deg);
+
+  color: $sw-yellow;
+  font-size: 1rem;
+  text-align: justify;
+
+  > div {
+    transition: margin-top .25s ease;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .sw-prolog {
+    font-size: 1.5rem;
+  }
+}
+
+
+@include media-breakpoint-up(md) {
+  .sw-prolog {
+    font-size: 1.75rem;
+    width: 80%;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .sw-prolog {
+    font-size: 2rem;
+  }
+}
