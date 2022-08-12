@@ -116,8 +116,8 @@
   </section>
 </template>
 <script>
-  import kosik from '../assets/img/logo/kosik.svg'
-  import usetreno from '../assets/img/logo/usetreno.svg'
+  const kosik = import('../assets/img/logo/kosik.svg')
+  const usetreno = import('../assets/img/logo/usetreno.svg')
 
   export default {
     name: 'MyWork',

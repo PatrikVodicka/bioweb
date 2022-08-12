@@ -1,17 +1,17 @@
 <template>
   <section>
-    <prolog></prolog>
+    <text-prolog />
   </section>
 </template>
 
 <script>
-  import Prolog from '../components/Prolog'
+  import TextProlog from '@/components/TextProlog'
 
   export default {
-    name: 'About',
+    name: 'AboutMe',
 
     components: {
-      Prolog,
+      TextProlog,
     },
   }
 </script>

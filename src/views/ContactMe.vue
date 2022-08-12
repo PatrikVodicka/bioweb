@@ -56,40 +56,19 @@
 </template>
 
 <script>
-  import linkedIn from '../assets/img/logo/linkedin.svg'
-  import facebook from '../assets/img/logo/facebook.svg'
-  import skype from '../assets/img/logo/skype.svg'
-  import gmail from '../assets/img/logo/gmail.svg'
+  import linkedIn from '@/assets/img/logo/linkedin.svg'
+  import facebook from '@/assets/img/logo/facebook.svg'
+  import skype from '@/assets/img/logo/skype.svg'
+  import gmail from '@/assets/img/logo/gmail.svg'
 
   export default {
-    name: 'Contact',
+    name: 'ContactMe',
 
     components: {
       linkedIn,
       facebook,
       skype,
       gmail,
-    },
-
-    data () {
-      return {
-        skype: {
-          name: 'patrik_vodicka',
-          isCopied: false,
-        },
-      }
-    },
-
-    methods: {
-      copySkype () {
-        let vm = this
-
-        this.$copyText(vm.skype.name).then(function () {
-          vm.skype.isCopied = true
-        }, function () {
-          vm.skype.isCopied = false
-        })
-      },
     },
   }
 </script>

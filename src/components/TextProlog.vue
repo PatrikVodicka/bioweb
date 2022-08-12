@@ -58,7 +58,7 @@
 
 <script>
   export default {
-    name: 'Prolog',
+    name: 'TextProlog',
 
     data () {
       return {
