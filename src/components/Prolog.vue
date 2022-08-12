@@ -2,12 +2,16 @@
   <article class="container">
     <div class="row align-items-center text-center h-100">
       <div class="col">
-        <div class="sw-intro"
-             :style="`animation-duration: ${intro.animationDuration}s;animation-delay: ${intro.animationDelay}s`">
+        <div
+          class="sw-intro"
+          :style="`animation-duration: ${intro.animationDuration}s;animation-delay: ${intro.animationDelay}s`"
+        >
           A long time ago in this galaxy not really far away...
         </div>
-        <div class="sw-title"
-             :style="`animation-duration: ${title.animationDuration}s;animation-delay: ${title.animationDelay}s`">
+        <div
+          class="sw-title"
+          :style="`animation-duration: ${title.animationDuration}s;animation-delay: ${title.animationDelay}s`"
+        >
           I was born
         </div>
       </div>
@@ -54,18 +58,18 @@
 
 <script>
   export default {
-    name: "Prolog",
+    name: 'Prolog',
 
-    data() {
+    data () {
       return {
         intro: {
           animationDuration: 8,
-          animationDelay: 0
+          animationDelay: 0,
         },
 
         title: {
           animationDuration: 0,
-          animationDelay: 8
+          animationDelay: 8,
         },
 
         prolog: {
@@ -78,42 +82,46 @@
     },
 
     methods: {
-      handleWheel(e) {
-        this.prolog.isScrolled = true;
+      handleWheel (e) {
+        this.prolog.isScrolled = true
 
         if (e.deltaY < 0) {
-          this.prolog.marginTop += 5;
+          this.prolog.marginTop += 5
         } else {
-          this.prolog.marginTop -= 5;
+          this.prolog.marginTop -= 5
         }
       },
 
-      animateProlog(sec) {
-        let start = Date.now();
+      animateProlog (sec) {
+        let start = Date.now()
 
         let timer = setInterval(() => {
-          let timePassed = Date.now() - start;
+          let timePassed = Date.now() - start
 
-          this.prolog.marginTop -= 1;
+          this.prolog.marginTop -= 1
 
-          if (timePassed > sec * 1000 || this.prolog.isScrolled) clearInterval(timer);
-        }, 250);
+          if (timePassed > sec * 1000 || this.prolog.isScrolled) {
+            clearInterval(timer)
+          }
+        }, 250)
       },
     },
 
-    mounted() {
+    mounted () {
       setTimeout(() => {
-        window.addEventListener('wheel', this.handleWheel);
-        this.animateProlog(this.prolog.animationDuration);
-      }, this.prolog.animationDelay * 1000);
+        window.addEventListener('wheel', this.handleWheel)
+        this.animateProlog(this.prolog.animationDuration)
+      }, this.prolog.animationDelay * 1000)
     },
 
-    destroyed() {
-      window.removeEventListener('wheel', this.handleWheel);
+    destroyed () {
+      window.removeEventListener('wheel', this.handleWheel)
     },
   }
 </script>
 
-<style lang="scss" scoped>
-  @import "../assets/scss/components/prolog.scss";
-</style>
+<style
+  lang="scss"
+  scoped
+  src="@/assets/scss/components/prolog.scss"
+/>

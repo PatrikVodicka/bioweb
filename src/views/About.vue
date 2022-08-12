@@ -5,17 +5,19 @@
 </template>
 
 <script>
-  import Prolog from "../components/Prolog";
+  import Prolog from '../components/Prolog'
 
   export default {
-    name: "About",
+    name: 'About',
 
     components: {
-      Prolog
-    }
+      Prolog,
+    },
   }
 </script>
 
-<style lang="scss" scoped>
-  @import "../assets/scss/views/about.scss";
-</style>
+<style
+  lang="scss"
+  scoped
+  src="@/assets/scss/views/about.scss"
+/>

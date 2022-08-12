@@ -10,7 +10,12 @@
         </p>
       </div>
       <div class="order-1 order-md-2 col-12 col-md-4 col-lg-3 col-xl-2 my-5 m-md-0 align-self-end align-self-md-center">
-        <img id="me" class="rounded-circle" src="../assets/img/avatar.jpg" alt="My avatar">
+        <img
+          id="me"
+          class="rounded-circle"
+          src="../assets/img/avatar.jpg"
+          alt="My avatar"
+        >
       </div>
     </div>
 
@@ -19,10 +24,12 @@
 
 <script>
   export default {
-    name: "Home",
+    name: 'Home',
   }
 </script>
 
-<style lang="scss" scoped>
-  @import "../assets/scss/views/home";
-</style>
+<style
+  lang="scss"
+  scoped
+  src="@/assets/scss/views/home.scss"
+/>
