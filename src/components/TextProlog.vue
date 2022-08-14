@@ -123,5 +123,5 @@
 <style
   lang="scss"
   scoped
-  src="@/assets/scss/components/prolog.scss"
+  src="@/assets/scss/components/TextProlog.scss"
 />
